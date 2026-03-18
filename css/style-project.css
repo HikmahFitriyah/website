@@ -1,0 +1,150 @@
+/* --- 1. Global Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* --- 2.Navigation Style ---*/
+/* Sticky navbar */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #fff; /* or semi-transparent if you like */
+    z-index: 1000;
+    padding: 0px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* subtle shadow */
+}
+
+/* Horizontal menu */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* Make the <a> take up the full li area */
+nav li a {
+    display: block;             /* makes it fill the li */
+    padding: 15px 30px 10px 30px;         /* top:10px, right:20px, bottom:5px, left:20px */
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    position: relative;         /* for underline pseudo-element */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for the full section */
+nav li a:hover {/* change the background of the section */
+    color: #F45AA5;             /* optional: also change text color */
+}
+
+/* Active link underline (shadow gradient) */
+nav li a.active{
+    color:rgb(28, 17, 128)
+}
+
+/* --- 3. Body Styles --- */
+body {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,'Tahoma', sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #ffff;
+}
+
+h1 {
+font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: rgb(28, 17, 128);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h2 {
+    font-size: clamp(1.5em, 2.5vw, 2.0rem);
+    font-weight: 500;
+    margin-bottom: 14px;
+    line-height: 100%;
+    color:rgb(28, 17, 128);
+}
+
+h3 {
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    font-weight: 500;
+    margin-bottom: 14px;
+    line-height: 140%;
+    color:rgb(28, 17, 128);
+}
+
+h4{
+    font-size: clamp(1rem,1vw,1rem);
+    font-weight: 600;
+}
+
+p{
+    font-size: clamp(1rem,1vw,1rem);
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.theme-intro{
+    margin-bottom: 40px;
+    background-color:  #fafafa;
+    padding: 40px 0px;
+}
+
+.theme-intro h4{
+    text-align: justify;
+}
+
+.project-title{
+    margin-bottom: 0px;
+}
+
+.project-body{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 32px;
+    align-items: start;
+    margin-top: 20px;
+}
+
+.project-text p {
+  margin-bottom: 0px;
+  max-width: 60ch;
+  text-align: justify;
+} 
+
+.project-text-overview{
+    margin-bottom: 40px;
+}
+
+.project-image {
+  display: flex;
+  justify-content: center;
+}
+
+.project-image img {
+  width: 100%;
+  max-width: 400px; /* controls size */
+  height: auto;
+  border-radius: 10px;
+}
+
+.project-section {
+  border-bottom: 2px solid #e6e6e6;
+  padding: 32px 0;
+}
+
+@media (max-width: 800px){
+    .project-body{
+        grid-template-columns: 1fr;
+    }
+}
